@@ -1,155 +1,520 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Professional Business</title>
 
 <link rel="stylesheet" href="css/style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
 <body>
 
+<!--================ NAVBAR ================-->
+
 <header>
 
 <div class="logo">
-
-Professional Business
-
+Business<span>Pro</span>
 </div>
 
 <nav>
 
 <ul>
 
-<li><a href="#about">About</a></li>
+<li><a href="index.html">Home</a></li>
 
-<li><a href="#services">Services</a></li>
+<li><a href="about.html">About</a></li>
 
-<li><a href="#contact">Contact</a></li>
+<li><a href="services.html">Services</a></li>
+
+<li><a href="portfolio.html">Portfolio</a></li>
+
+<li><a href="pricing.html">Pricing</a></li>
+
+<li><a href="contact.html">Contact</a></li>
 
 </ul>
 
 </nav>
 
+<div>
+
+<a href="login.html" class="login-btn">
+Login
+</a>
+
+<a href="order.html" class="order-btn">
+Get Started
+</a>
+
+</div>
+
 </header>
 
+<!--================ HERO ================-->
 
 <section class="hero">
 
-<div class="hero-content">
+<div class="hero-left">
 
-<h1>Helping Businesses Grow Online</h1>
+<h1>
 
-<p>Professional digital services tailored to your success.</p>
+Grow Your Business With Modern Digital Solutions
 
-<a href="#contact" class="btn">Get Started</a>
+</h1>
+
+<p>
+
+We create professional websites, premium logos,
+branding and digital marketing solutions for businesses.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="services.html" class="primary-btn">
+Our Services
+</a>
+
+<a href="portfolio.html" class="secondary-btn">
+View Portfolio
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<img src="images/hero.png">
 
 </div>
 
 </section>
 
+<!--================ ABOUT ================-->
 
-<section id="about" class="section">
+<section class="about">
 
-<div class="container">
+<div class="section-title">
+
+<h2>About Us</h2>
+
+<p>
+Professional Digital Agency
+</p>
+
+</div>
+
+<div class="about-grid">
 
 <div>
 
-<img src="images/about.jpg" alt="About">
+<img src="images/about.jpg">
 
 </div>
 
 <div>
 
-<h2>About Us</h2>
+<h3>
+
+We Build Modern Brands
+
+</h3>
 
 <p>
 
-We provide professional web development, branding and digital solutions
-that help businesses establish a strong online presence.
+We help startups and companies build premium websites,
+professional logos, SEO campaigns and branding strategies.
 
-Our team believes in quality, innovation and long-term partnerships.
+</p>
+
+<p>
+
+Our mission is to provide affordable and premium digital
+solutions that help businesses grow faster.
+
+</p>
+
+<a href="about.html" class="primary-btn">
+
+Read More
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!--================ SERVICES ================-->
+
+<section class="services">
+
+<div class="section-title">
+
+<h2>
+
+Our Services
+
+</h2>
+
+<p>
+
+Everything You Need
 
 </p>
 
 </div>
 
+<div class="service-grid">
+
+<div class="card">
+
+<i class="fa-solid fa-laptop-code"></i>
+
+<h3>
+
+Website Development
+
+</h3>
+
+<p>
+
+Modern Responsive Websites
+
+</p>
+
+<a href="services.html">
+
+Learn More →
+
+</a>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-pen-ruler"></i>
+
+<h3>
+
+Logo Design
+
+</h3>
+
+<p>
+
+Creative Brand Identity
+
+</p>
+
+<a href="services.html">
+
+Learn More →
+
+</a>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>
+
+SEO
+
+</h3>
+
+<p>
+
+Google Ranking Optimization
+
+</p>
+
+<a href="services.html">
+
+Learn More →
+
+</a>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-bullhorn"></i>
+
+<h3>
+
+Digital Marketing
+
+</h3>
+
+<p>
+
+Reach More Customers
+
+</p>
+
+<a href="services.html">
+
+Learn More →
+
+</a>
+
+</div>
+
 </div>
 
 </section>
 
+<!--================ COUNTERS ================-->
 
-<section id="services" class="section light">
+<section class="counter">
 
-<h2>Services</h2>
+<div>
 
-<div class="services">
+<h2 class="count" data-target="500">
 
-<div class="card">
+0
 
-<h3>Website Design</h3>
+</h2>
 
-<p>Modern responsive websites built for speed and conversions.</p>
+<p>
 
-</div>
+Projects
 
-<div class="card">
-
-<h3>Logo Design</h3>
-
-<p>Professional branding that makes your business memorable.</p>
+</p>
 
 </div>
 
-<div class="card">
+<div>
 
-<h3>SEO</h3>
+<h2 class="count" data-target="300">
 
-<p>Improve your visibility and reach more customers online.</p>
+0
+
+</h2>
+
+<p>
+
+Happy Clients
+
+</p>
 
 </div>
 
-<div class="card">
+<div>
 
-<h3>Digital Marketing</h3>
+<h2 class="count" data-target="12">
 
-<p>Targeted campaigns that help your business grow.</p>
+0
+
+</h2>
+
+<p>
+
+Years Experience
+
+</p>
 
 </div>
+
+<div>
+
+<h2 class="count" data-target="24">
+
+0
+
+</h2>
+
+<p>
+
+Awards
+
+</p>
 
 </div>
 
 </section>
 
+<!--================ CTA ================-->
 
-<section id="contact" class="section">
+<section class="cta">
 
-<h2>Contact Us</h2>
+<h2>
 
-<p>Email: info@example.com</p>
+Ready To Start Your Project?
 
-<p>Phone: +91 98765 43210</p>
+</h2>
 
-<p>Location: India</p>
+<p>
 
-<a class="btn" href="mailto:info@example.com">Send Email</a>
+Let's build something amazing together.
+
+</p>
+
+<a href="order.html" class="primary-btn">
+
+Order Now
+
+</a>
 
 </section>
+
+<!--================ CONTACT ================-->
+
+<section class="contact">
+
+<div class="section-title">
+
+<h2>
+
+Contact
+
+</h2>
+
+</div>
+
+<div class="contact-grid">
+
+<div>
+
+<h3>
+
+Business Information
+
+</h3>
+
+<p>
+
+📧 info@example.com
+
+</p>
+
+<p>
+
+📞 +91 9876543210
+
+</p>
+
+<p>
+
+📍 India
+
+</p>
+
+</div>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea placeholder="Message"></textarea>
+
+<button>
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!--================ FOOTER ================-->
 
 <footer>
 
-© 2026 Professional Business. All Rights Reserved.
+<div class="footer-grid">
+
+<div>
+
+<h3>
+
+BusinessPro
+
+</h3>
+
+<p>
+
+Premium Business Solutions
+
+</p>
+
+</div>
+
+<div>
+
+<h3>
+
+Quick Links
+
+</h3>
+
+<a href="about.html">About</a>
+
+<a href="services.html">Services</a>
+
+<a href="portfolio.html">Portfolio</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+<div>
+
+<h3>
+
+Social
+
+</h3>
+
+<a href="#">Facebook</a>
+
+<a href="#">Instagram</a>
+
+<a href="#">LinkedIn</a>
+
+<a href="#">YouTube</a>
+
+</div>
+
+</div>
+
+<p class="copyright">
+
+© 2026 BusinessPro. All Rights Reserved.
+
+</p>
 
 </footer>
+
+<button id="topBtn">
+
+↑
+
+</button>
 
 <script src="js/script.js"></script>
 
 </body>
 
 </html>
+
