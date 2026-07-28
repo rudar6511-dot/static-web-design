@@ -286,3 +286,47 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+// 3D Mouse Movement Effect
+
+document.querySelectorAll(".card, .portfolio-card, .pricing-card")
+.forEach(card=>{
+
+
+card.addEventListener("mousemove",(e)=>{
+
+
+let x = e.offsetX;
+
+let y = e.offsetY;
+
+
+let rotateX = (y - card.clientHeight / 2) / 15;
+
+let rotateY = (x - card.clientWidth / 2) / 15;
+
+
+
+card.style.transform =
+`
+perspective(1000px)
+rotateX(${-rotateX}deg)
+rotateY(${rotateY}deg)
+scale(1.05)
+`;
+
+
+
+});
+
+
+
+card.addEventListener("mouseleave",()=>{
+
+
+card.style.transform="";
+
+
+});
+
+
+});
