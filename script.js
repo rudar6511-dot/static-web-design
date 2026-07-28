@@ -1,26 +1,288 @@
-const cards=document.querySelectorAll(".card");
+/*=========================================
+  PREMIUM BUSINESS WEBSITE SCRIPT
+=========================================*/
 
-const observer=new IntersectionObserver(entries=>{
+document.addEventListener("DOMContentLoaded", () => {
 
-entries.forEach(entry=>{
+    /*==============================
+      STICKY HEADER SHADOW
+    ==============================*/
 
-if(entry.isIntersecting){
+    const header = document.querySelector("header");
 
-entry.target.style.opacity=1;
-entry.target.style.transform="translateY(0)";
+    window.addEventListener("scroll", () => {
 
-}
+        if (window.scrollY > 50) {
 
-});
+            header.style.background = "rgba(255,255,255,.95)";
+            header.style.boxShadow = "0 10px 30px rgba(0,0,0,.12)";
 
-});
+        } else {
 
-cards.forEach(card=>{
+            header.style.background = "rgba(255,255,255,.75)";
+            header.style.boxShadow = "0 10px 30px rgba(0,0,0,.08)";
 
-card.style.opacity=0;
-card.style.transform="translateY(40px)";
-card.style.transition="0.6s";
+        }
 
-observer.observe(card);
+    });
+
+
+    /*==============================
+      BACK TO TOP BUTTON
+    ==============================*/
+
+    const topBtn = document.getElementById("topBtn");
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 400) {
+
+            topBtn.style.display = "block";
+
+        } else {
+
+            topBtn.style.display = "none";
+
+        }
+
+    });
+
+    topBtn.addEventListener("click", () => {
+
+        window.scrollTo({
+
+            top: 0,
+            behavior: "smooth"
+
+        });
+
+    });
+
+
+    /*==============================
+      COUNTER ANIMATION
+    ==============================*/
+
+    const counters = document.querySelectorAll(".count");
+
+    counters.forEach(counter => {
+
+        counter.innerText = "0";
+
+        const updateCounter = () => {
+
+            const target = +counter.getAttribute("data-target");
+
+            const current = +counter.innerText;
+
+            const increment = Math.ceil(target / 100);
+
+            if (current < target) {
+
+                counter.innerText = current + increment;
+
+                setTimeout(updateCounter, 20);
+
+            } else {
+
+                counter.innerText = target;
+
+            }
+
+        };
+
+        updateCounter();
+
+    });
+
+
+    /*==============================
+      SCROLL REVEAL
+    ==============================*/
+
+    const observer = new IntersectionObserver(entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("show");
+
+            }
+
+        });
+
+    }, {
+
+        threshold: 0.2
+
+    });
+
+    document.querySelectorAll(".card,.about-grid,.hero,.contact,.cta").forEach(el => {
+
+        el.classList.add("hidden");
+
+        observer.observe(el);
+
+    });
+
+
+    /*==============================
+      BUTTON RIPPLE EFFECT
+    ==============================*/
+
+    document.querySelectorAll(".primary-btn,.secondary-btn,.order-btn,.login-btn")
+        .forEach(button => {
+
+            button.addEventListener("click", function(e) {
+
+                const ripple = document.createElement("span");
+
+                ripple.className = "ripple";
+
+                const rect = this.getBoundingClientRect();
+
+                ripple.style.left = (e.clientX - rect.left) + "px";
+                ripple.style.top = (e.clientY - rect.top) + "px";
+
+                this.appendChild(ripple);
+
+                setTimeout(() => {
+
+                    ripple.remove();
+
+                }, 600);
+
+            });
+
+        });
+
+
+    /*==============================
+      SMOOTH SCROLL
+    ==============================*/
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+        anchor.addEventListener("click", function(e) {
+
+            e.preventDefault();
+
+            const target = document.querySelector(this.getAttribute("href"));
+
+            if (target) {
+
+                target.scrollIntoView({
+
+                    behavior: "smooth"
+
+                });
+
+            }
+
+        });
+
+    });
+
+
+    /*==============================
+      IMAGE HOVER EFFECT
+    ==============================*/
+
+    document.querySelectorAll("img").forEach(img => {
+
+        img.addEventListener("mouseenter", () => {
+
+            img.style.transform = "scale(1.05)";
+            img.style.transition = ".5s";
+
+        });
+
+        img.addEventListener("mouseleave", () => {
+
+            img.style.transform = "scale(1)";
+
+        });
+
+    });
+
+
+    /*==============================
+      CARD TILT EFFECT
+    ==============================*/
+
+    document.querySelectorAll(".card").forEach(card => {
+
+        card.addEventListener("mousemove", (e) => {
+
+            const x = e.offsetX;
+            const y = e.offsetY;
+
+            const rotateX = (y / card.offsetHeight - 0.5) * -15;
+            const rotateY = (x / card.offsetWidth - 0.5) * 15;
+
+            card.style.transform =
+                `perspective(1000px)
+                 rotateX(${rotateX}deg)
+                 rotateY(${rotateY}deg)
+                 translateY(-10px)`;
+
+        });
+
+        card.addEventListener("mouseleave", () => {
+
+            card.style.transform =
+                "perspective(1000px) rotateX(0) rotateY(0)";
+
+        });
+
+    });
+
+
+    /*==============================
+      LOADING FADE
+    ==============================*/
+
+    document.body.style.opacity = "0";
+
+    setTimeout(() => {
+
+        document.body.style.transition = ".8s";
+        document.body.style.opacity = "1";
+
+    }, 100);
+
+
+    /*==============================
+      TYPEWRITER EFFECT
+    ==============================*/
+
+    const heroTitle = document.querySelector(".hero h1");
+
+    if (heroTitle) {
+
+        const text = heroTitle.innerText;
+
+        heroTitle.innerText = "";
+
+        let i = 0;
+
+        function typing() {
+
+            if (i < text.length) {
+
+                heroTitle.innerHTML += text.charAt(i);
+
+                i++;
+
+                setTimeout(typing, 40);
+
+            }
+
+        }
+
+        typing();
+
+    }
 
 });
