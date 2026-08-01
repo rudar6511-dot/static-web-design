@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Hero SVG: abstract gradients for premium look -->
+<svg width="1200" height="720" viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="50%" stop-color="#7c5cff"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <filter id="f1" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="40" result="b"/>
+      <feBlend in="SourceGraphic" in2="b" mode="screen"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="720" fill="url(#g1)"/>
+  <g filter="url(#f1)">
+    <circle cx="980" cy="120" r="180" fill="#ffffff22" />
+    <circle cx="160" cy="600" r="220" fill="#ffffff20" />
+  </g>
+  <g transform="translate(80,120)">
+    <rect x="0" y="0" width="560" height="360" rx="18" fill="#ffffff" fill-opacity="0.06" />
+    <g transform="translate(16,16)">
+      <rect width="220" height="120" rx="10" fill="#ffffff22"/>
+      <rect x="240" y="0" width="280" height="120" rx="10" fill="#ffffff11"/>
+      <rect y="140" width="520" height="180" rx="12" fill="#ffffff14"/>
+    </g>
+  </g>
+  <text x="680" y="420" font-family="Poppins, Arial, sans-serif" font-size="42" fill="#ffffffcc">Showcase</text>
+</svg>
