@@ -35,6 +35,20 @@ body::after{
 /* Make header and major blocks sit above bg */
 header, .hero, .card, footer, .cta{position:relative;z-index:2}
 
+/* Gradient text utility */
+.gradient-text{
+  background: linear-gradient(90deg,var(--accent-1),var(--accent-2),var(--accent-3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Colorful section backgrounds */
+.color-section{padding:60px 0;border-radius:14px;margin:24px 0}
+.color-section.light{background:linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.06))}
+.color-section.deep{background:linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.04))}
+
 /* Nav refinements */
 header{background:linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,0.06)}
 header .logo{font-weight:800;font-size:1.15rem;letter-spacing:0.2px}
@@ -43,8 +57,8 @@ nav ul li a:hover{color:#fff;filter:drop-shadow(0 6px 18px rgba(0,0,0,0.18))}
 
 /* Make hero more premium */
 .hero{padding-top:120px;padding-bottom:80px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px}
-.hero-left h1{font-size:clamp(2rem,4vw,3.6rem);color:white;margin:0 0 14px;text-shadow:0 6px 30px rgba(7,10,20,0.35)}
-.hero-left p{color:rgba(255,255,255,0.92);font-size:1.05rem}
+.hero-left h1{font-size:clamp(2rem,4vw,3.6rem);margin:0 0 14px;text-shadow:0 6px 30px rgba(7,10,20,0.35)}
+.hero-left p{font-size:1.05rem}
 .hero-right .card{padding:12px;border-radius:14px;overflow:hidden}
 
 /* Buttons */
