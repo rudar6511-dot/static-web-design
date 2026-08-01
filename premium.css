@@ -104,10 +104,23 @@ footer{color:#eee}
 .hidden{opacity:0;transform:translateY(30px);transition:all .8s ease}
 .show{opacity:1;transform:translateY(0)}
 
-/* Custom cursor */
-.custom-cursor{position:fixed;left:0;top:0;width:14px;height:14px;border-radius:50%;pointer-events:none;z-index:9999;background:rgba(255,255,255,0.95);box-shadow:0 8px 20px rgba(0,0,0,0.18);transform:translate(-50%,-50%) scale(1);transition:transform .12s ease,background .12s ease,opacity .18s;mix-blend-mode:screen}
+/* Custom cursor (black circular pointer) */
+.custom-cursor{
+  position:fixed;
+  left:0;
+  top:0;
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  pointer-events:none;
+  z-index:99999;
+  background:#000; /* black cursor */
+  box-shadow:0 8px 20px rgba(0,0,0,0.6);
+  transform:translate(-50%,-50%) scale(1);
+  transition:transform .12s ease,background .12s ease,opacity .18s;
+}
 .custom-cursor.dot{width:10px;height:10px}
-.custom-cursor.grow{transform:translate(-50%,-50%) scale(2.8);background:rgba(255,255,255,0.98)}
+.custom-cursor.grow{transform:translate(-50%,-50%) scale(2.6);background:#000}
 
 /* Hide native pointer when using custom cursor on fine pointers */
 @media (pointer: fine){
