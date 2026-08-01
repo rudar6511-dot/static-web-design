@@ -5,7 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Professional Business</title>
 
-<link rel="stylesheet" href="css/style.css">
+<!-- Core stylesheet (keeps existing rules) -->
+<link rel="stylesheet" href="style.css">
+<!-- Premium overrides & animations -->
+<link rel="stylesheet" href="animations.css">
+<link rel="stylesheet" href="premium.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,7 +67,7 @@ Get Started
 
 <!--================ HERO ================-->
 
-<section class="hero">
+<section class="hero container">
 
 <div class="hero-left">
 
@@ -96,7 +100,9 @@ View Portfolio
 
 <div class="hero-right">
 
-<img src="images/hero.png">
+<div class="card">
+<img src="images/hero.png" alt="Hero Showcase">
+</div>
 
 </div>
 
@@ -104,7 +110,7 @@ View Portfolio
 
 <!--================ ABOUT ================-->
 
-<section class="about">
+<section class="about container">
 
 <div class="section-title">
 
@@ -120,36 +126,30 @@ Professional Digital Agency
 
 <div>
 
-<img src="images/about.jpg">
+<img src="images/about.jpg" alt="About">
 
 </div>
 
 <div>
 
 <h3>
-
 We Build Modern Brands
-
 </h3>
 
 <p>
-
 We help startups and companies build premium websites,
 professional logos, SEO campaigns and branding strategies.
 
 </p>
 
 <p>
-
 Our mission is to provide affordable and premium digital
 solutions that help businesses grow faster.
 
 </p>
 
 <a href="about.html" class="primary-btn">
-
 Read More
-
 </a>
 
 </div>
@@ -160,47 +160,35 @@ Read More
 
 <!--================ SERVICES ================-->
 
-<section class="services">
+<section class="services container">
 
 <div class="section-title">
 
 <h2>
-
 Our Services
-
 </h2>
 
 <p>
-
 Everything You Need
-
 </p>
 
 </div>
 
-<div class="service-grid">
+<div class="service-grid grid-3">
 
 <div class="card">
 
 <i class="fa-solid fa-laptop-code"></i>
 
 <h3>
-
 Website Development
-
 </h3>
 
 <p>
-
 Modern Responsive Websites
-
 </p>
 
-<a href="services.html">
-
-Learn More →
-
-</a>
+<a href="services.html">Learn More →</a>
 
 </div>
 
@@ -209,22 +197,14 @@ Learn More →
 <i class="fa-solid fa-pen-ruler"></i>
 
 <h3>
-
 Logo Design
-
 </h3>
 
 <p>
-
 Creative Brand Identity
-
 </p>
 
-<a href="services.html">
-
-Learn More →
-
-</a>
+<a href="services.html">Learn More →</a>
 
 </div>
 
@@ -233,22 +213,14 @@ Learn More →
 <i class="fa-solid fa-chart-line"></i>
 
 <h3>
-
 SEO
-
 </h3>
 
 <p>
-
 Google Ranking Optimization
-
 </p>
 
-<a href="services.html">
-
-Learn More →
-
-</a>
+<a href="services.html">Learn More →</a>
 
 </div>
 
@@ -257,22 +229,14 @@ Learn More →
 <i class="fa-solid fa-bullhorn"></i>
 
 <h3>
-
 Digital Marketing
-
 </h3>
 
 <p>
-
 Reach More Customers
-
 </p>
 
-<a href="services.html">
-
-Learn More →
-
-</a>
+<a href="services.html">Learn More →</a>
 
 </div>
 
@@ -282,69 +246,37 @@ Learn More →
 
 <!--================ COUNTERS ================-->
 
-<section class="counter">
+<section class="counter container">
 
 <div>
 
-<h2 class="count" data-target="500">
+<h2 class="count" data-target="500">0</h2>
 
-0
-
-</h2>
-
-<p>
-
-Projects
-
-</p>
+<p>Projects</p>
 
 </div>
 
 <div>
 
-<h2 class="count" data-target="300">
+<h2 class="count" data-target="300">0</h2>
 
-0
-
-</h2>
-
-<p>
-
-Happy Clients
-
-</p>
+<p>Happy Clients</p>
 
 </div>
 
 <div>
 
-<h2 class="count" data-target="12">
+<h2 class="count" data-target="12">0</h2>
 
-0
-
-</h2>
-
-<p>
-
-Years Experience
-
-</p>
+<p>Years Experience</p>
 
 </div>
 
 <div>
 
-<h2 class="count" data-target="24">
+<h2 class="count" data-target="24">0</h2>
 
-0
-
-</h2>
-
-<p>
-
-Awards
-
-</p>
+<p>Awards</p>
 
 </div>
 
@@ -352,39 +284,23 @@ Awards
 
 <!--================ CTA ================-->
 
-<section class="cta">
+<section class="cta container">
 
-<h2>
+<h2>Ready To Start Your Project?</h2>
 
-Ready To Start Your Project?
+<p>Let's build something amazing together.</p>
 
-</h2>
-
-<p>
-
-Let's build something amazing together.
-
-</p>
-
-<a href="order.html" class="primary-btn">
-
-Order Now
-
-</a>
+<a href="order.html" class="primary-btn">Order Now</a>
 
 </section>
 
 <!--================ CONTACT ================-->
 
-<section class="contact">
+<section class="contact container">
 
 <div class="section-title">
 
-<h2>
-
-Contact
-
-</h2>
+<h2>Contact</h2>
 
 </div>
 
@@ -392,29 +308,13 @@ Contact
 
 <div>
 
-<h3>
+<h3>Business Information</h3>
 
-Business Information
+<p>📧 info@example.com</p>
 
-</h3>
+<p>📞 +91 9876543210</p>
 
-<p>
-
-📧 info@example.com
-
-</p>
-
-<p>
-
-📞 +91 9876543210
-
-</p>
-
-<p>
-
-📍 India
-
-</p>
+<p>📍 India</p>
 
 </div>
 
@@ -426,11 +326,7 @@ Business Information
 
 <textarea placeholder="Message"></textarea>
 
-<button>
-
-Send Message
-
-</button>
+<button type="button">Send Message</button>
 
 </form>
 
@@ -440,33 +336,21 @@ Send Message
 
 <!--================ FOOTER ================-->
 
-<footer>
+<footer class="container">
 
 <div class="footer-grid">
 
 <div>
 
-<h3>
+<h3>BusinessPro</h3>
 
-BusinessPro
-
-</h3>
-
-<p>
-
-Premium Business Solutions
-
-</p>
+<p>Premium Business Solutions</p>
 
 </div>
 
 <div>
 
-<h3>
-
-Quick Links
-
-</h3>
+<h3>Quick Links</h3>
 
 <a href="about.html">About</a>
 
@@ -480,11 +364,7 @@ Quick Links
 
 <div>
 
-<h3>
-
-Social
-
-</h3>
+<h3>Social</h3>
 
 <a href="#">Facebook</a>
 
@@ -498,23 +378,17 @@ Social
 
 </div>
 
-<p class="copyright">
-
-© 2026 BusinessPro. All Rights Reserved.
-
-</p>
+<p class="copyright">© 2026 BusinessPro. All Rights Reserved.</p>
 
 </footer>
 
-<button id="topBtn">
+<button id="topBtn">↑</button>
 
-↑
+<!-- custom cursor element -->
+<div class="custom-cursor" aria-hidden="true"></div>
 
-</button>
-
-<script src="js/script.js"></script>
+<script src="script.js"></script>
 
 </body>
 
 </html>
-
