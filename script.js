@@ -330,3 +330,58 @@ card.style.transform="";
 
 
 });
+// premium-cursor.js — smooth trailing cursor, hover grow, click feedback
+(function(){
+  const cursor = document.querySelector('.custom-cursor');
+  if(!cursor) return;
+
+  // disable on touch devices
+  if(window.matchMedia && window.matchMedia('(pointer: coarse)').matches){
+    cursor.style.display = 'none';
+    return;
+  }
+
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  let posX = mouseX, posY = mouseY;
+  const lerp = (a,b,t) => (1 - t) * a + t * b;
+
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  }, {passive:true});
+
+  // interactive elements
+  const interactiveSelector = 'a, button, .primary-btn, .secondary-btn, input, textarea, .card';
+  document.querySelectorAll(interactiveSelector).forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('grow'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('grow'));
+  });
+
+  // click visual feedback
+  document.addEventListener('mousedown', () => {
+    cursor.style.transform = 'translate(-50%,-50%) scale(0.6)';
+    setTimeout(()=> cursor.style.transform = '', 140);
+  });
+
+  // smooth follow
+  function animate() {
+    posX = lerp(posX, mouseX, 0.16);
+    posY = lerp(posY, mouseY, 0.16);
+    cursor.style.left = posX + 'px';
+    cursor.style.top = posY + 'px';
+    requestAnimationFrame(animate);
+  }
+  requestAnimationFrame(animate);
+
+  // idle fade (optional)
+  let idleTimer;
+  function setIdle(){ cursor.style.opacity = '0.6'; }
+  function clearIdle(){
+    cursor.style.opacity = '1';
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(setIdle, 4000);
+  }
+  document.addEventListener('mousemove', clearIdle, {passive:true});
+  clearIdle();
+})();
