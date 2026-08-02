@@ -6,214 +6,139 @@
 <title>About Us | BusinessPro</title>
 
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="animations.css">
+<link rel="stylesheet" href="premium.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
 
 <header>
+  <div class="logo">Business<span>Pro</span></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-<div class="logo">
-Business<span>Pro</span>
-</div>
+  <div class="header-user" id="headerUser">
+    <button id="openSignin" class="primary-btn">Login</button>
+    <div id="userBox" style="display:none;align-items:center;gap:10px;">
+      <div class="user-avatar" id="userAvatar"></div>
+      <div class="user-name" id="userName" style="color:#fff"></div>
+      <div class="user-menu" id="userMenu" role="menu" aria-hidden="true">
+        <a href="#" id="profileLink">Profile</a>
+        <a href="#" id="logoutLink">Logout</a>
+      </div>
+    </div>
+  </div>
 
-<nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html" class="active">About</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="portfolio.html">Portfolio</a></li>
-<li><a href="pricing.html">Pricing</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
-
-<div>
-<a href="login.html" class="login-btn">Login</a>
-<a href="order.html" class="order-btn">Get Started</a>
-</div>
-
+  <div>
+    <a href="#" class="order-btn">Get Started</a>
+  </div>
 </header>
 
-<section class="hero" style="min-height:60vh;">
-<div class="hero-left">
-
-<h1>About Our Company</h1>
-
-<p>
-We help businesses grow online through premium website design,
-branding, SEO, digital marketing and software solutions.
-</p>
-
-</div>
-
-<div class="hero-right">
-<img src="images/about.jpg" alt="About">
-</div>
-
+<section class="hero container color-section light" style="min-height:60vh;">
+  <div class="hero-left">
+    <h1 class="gradient-text">About Our Company</h1>
+    <p>We help businesses grow online through premium website design, branding, SEO, digital marketing and software solutions.</p>
+  </div>
+  <div class="hero-right">
+    <img src="images/about.svg" alt="About" style="width:100%;max-width:520px;">
+  </div>
 </section>
 
-<section class="about">
+<section class="about container">
+  <div class="section-title">
+    <h2 class="gradient-text">Who We Are</h2>
+    <p>Creative • Professional • Trusted</p>
+  </div>
 
-<div class="section-title">
-
-<h2>Who We Are</h2>
-
-<p>Creative • Professional • Trusted</p>
-
-</div>
-
-<div class="about-grid">
-
-<div>
-
-<img src="images/team.jpg" alt="Team">
-
-</div>
-
-<div>
-
-<h3>Our Story</h3>
-
-<p>
-
-BusinessPro was founded with one mission—
-to provide world-class digital solutions that help
-businesses stand out from the competition.
-
-</p>
-
-<p>
-
-Our experienced designers and developers create
-beautiful websites, premium logos, branding,
-digital marketing campaigns and business solutions.
-
-</p>
-
-<a href="services.html" class="primary-btn">
-
-Explore Services
-
-</a>
-
-</div>
-
-</div>
-
+  <div class="about-grid">
+    <div>
+      <img src="images/team.jpg" alt="Team" style="border-radius:12px;">
+    </div>
+    <div>
+      <h3 class="gradient-text">Our Story</h3>
+      <p>BusinessPro was founded with one mission— to provide world-class digital solutions that help businesses stand out from the competition.</p>
+      <p>Our experienced designers and developers create beautiful websites, premium logos, branding, digital marketing campaigns and business solutions.</p>
+      <a href="services.html" class="primary-btn">Explore Services</a>
+    </div>
+  </div>
 </section>
 
-<section class="services">
-
-<div class="section-title">
-
-<h2>Why Choose Us?</h2>
-
-</div>
-
-<div class="service-grid">
-
-<div class="card">
-<i class="fa-solid fa-award"></i>
-<h3>Premium Quality</h3>
-<p>Modern UI/UX with professional coding standards.</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-users"></i>
-<h3>Expert Team</h3>
-<p>Experienced developers and creative designers.</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-headset"></i>
-<h3>24/7 Support</h3>
-<p>Dedicated support whenever you need help.</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-shield-halved"></i>
-<h3>Reliable Service</h3>
-<p>Fast, secure and scalable business solutions.</p>
-</div>
-
-</div>
-
+<section class="services container color-section light">
+  <div class="section-title">
+    <h2 class="gradient-text">Why Choose Us?</h2>
+  </div>
+  <div class="service-grid grid-3">
+    <div class="card">
+      <i class="fa-solid fa-award"></i>
+      <h3>Premium Quality</h3>
+      <p>Modern UI/UX with professional coding standards.</p>
+    </div>
+    <div class="card">
+      <i class="fa-solid fa-users"></i>
+      <h3>Expert Team</h3>
+      <p>Experienced developers and creative designers.</p>
+    </div>
+    <div class="card">
+      <i class="fa-solid fa-headset"></i>
+      <h3>24/7 Support</h3>
+      <p>Dedicated support whenever you need help.</p>
+    </div>
+    <div class="card">
+      <i class="fa-solid fa-shield-halved"></i>
+      <h3>Reliable Service</h3>
+      <p>Fast, secure and scalable business solutions.</p>
+    </div>
+  </div>
 </section>
 
-<section class="cta">
-
-<h2>Ready to Work With Us?</h2>
-
-<p>
-
-Let's build something amazing together.
-
-</p>
-
-<a href="contact.html" class="primary-btn">
-
-Contact Us
-
-</a>
-
+<section class="cta container color-section light text-center">
+  <h2 class="gradient-text">Ready to Work With Us?</h2>
+  <p>Let's build something amazing together.</p>
+  <a href="contact.html" class="primary-btn">Contact Us</a>
 </section>
 
-<footer>
-
-<div class="footer-grid">
-
-<div>
-
-<h3>BusinessPro</h3>
-
-<p>Premium Business Solutions.</p>
-
-</div>
-
-<div>
-
-<h3>Quick Links</h3>
-
-<a href="index.html">Home</a>
-
-<a href="services.html">Services</a>
-
-<a href="portfolio.html">Portfolio</a>
-
-<a href="contact.html">Contact</a>
-
-</div>
-
-<div>
-
-<h3>Follow Us</h3>
-
-<a href="#">Facebook</a>
-
-<a href="#">Instagram</a>
-
-<a href="#">LinkedIn</a>
-
-<a href="#">YouTube</a>
-
-</div>
-
-</div>
-
-<p class="copyright">
-
-© 2026 BusinessPro. All Rights Reserved.
-
-</p>
-
+<footer class="container">
+  <div class="footer-grid">
+    <div>
+      <h3>BusinessPro</h3>
+      <p>Premium Business Solutions.</p>
+    </div>
+    <div>
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <h3>Follow Us</h3>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">YouTube</a>
+    </div>
+  </div>
+  <p class="copyright">© 2026 BusinessPro. All Rights Reserved.</p>
 </footer>
 
-<script src="js/script.js"></script>
+<button id="topBtn">↑</button>
 
+<!-- custom cursor element -->
+<div class="custom-cursor" aria-hidden="true"></div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
